@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="803.0" prefWidth="772.0" spacing="20.0" style="-fx-background-color: #87CEEB;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+
+    <Label alignment="CENTER" prefHeight="21.0" prefWidth="561.0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #5AA9E6;" text="BANCOMAT - GESTIONARE CARDURI" />
+
+    <MenuBar prefHeight="15.0" prefWidth="128.0">
+            <Menu text="Fișier">
+                <MenuItem onAction="#onExitMenuClick" text="Ieșire" />
+            </Menu>
+            <Menu text="Ajutor">
+                <MenuItem onAction="#onAboutMenuClick" text="Despre" />
+            </Menu>
+    </MenuBar>
+
+    <TextField fx:id="cardNumberField" alignment="BOTTOM_CENTER" prefWidth="300" promptText="Introduceți numărul cardului" />
+
+    <Button onAction="#onSearchCardMovementsButtonClick" style="-fx-background-color: #CAF0F8; -fx-text-fill: black; -fx-font-weight: bold; -fx-border-radius: 10; -fx-background-radius: 10;" text="Caută Mișcările Cardului" />
+
+    <Button onAction="#onCase10ButtonClick" style="-fx-background-color: #CAF0F8; -fx-text-fill: black; -fx-font-weight: bold; -fx-border-radius: 10; -fx-background-radius: 10;" text="Carduri care au mișcări identice cu cardul introdus" />
+
+    <Button onAction="#onCase5ButtonClick" style="-fx-background-color: #CAF0F8; -fx-text-fill: black; -fx-font-weight: bold; -fx-border-radius: 10; -fx-background-radius: 10;" text="Detaliile cardurilor care expira în Noiembrie 2024" />
+    <Button onAction="#onCase6ButtonClick" style="-fx-background-color: #CAF0F8; -fx-text-fill: black; -fx-font-weight: bold; -fx-border-radius: 10; -fx-background-radius: 10;" text="Afișare mișcări care au ca și scop: 'Alimentare'" />
+    <Button onAction="#onCase7ButtonClick" style="-fx-background-color: #CAF0F8; -fx-text-fill: black; -fx-font-weight: bold; -fx-border-radius: 10; -fx-background-radius: 10;" text="Deținători de carduri MASTERCARD care au soldul negativ" />
+    <Button onAction="#onCase8ButtonClick" style="-fx-background-color: #CAF0F8; -fx-text-fill: black; -fx-font-weight: bold; -fx-border-radius: 10; -fx-background-radius: 10;" text="Conturi cu acelși sold" />
+    <Button onAction="#onCase9ButtonClick" style="-fx-background-color: #CAF0F8; -fx-text-fill: black; -fx-font-weight: bold; -fx-border-radius: 10; -fx-background-radius: 10;" text="Persoane care dețin carduri cu limita maximă" />
+    <Button onAction="#onCase11ButtonClick" style="-fx-background-color: #CAF0F8; -fx-text-fill: black; -fx-font-weight: bold; -fx-border-radius: 10; -fx-background-radius: 10;" text="Numărare carduri valide in funcție de gen" />
+    <Button onAction="#onCase12ButtonClick" style="-fx-background-color: #CAF0F8; -fx-text-fill: black; -fx-font-weight: bold; -fx-border-radius: 10; -fx-background-radius: 10;" text="Statistica cheltuielilor după categorie" />
+    <Button onAction="#onCase13ButtonClick" style="-fx-background-color: #CAF0F8; -fx-text-fill: black; -fx-font-weight: bold; -fx-border-radius: 10; -fx-background-radius: 10;" text="Afișează cardurile expirate din Noiembrie 2024" />
+
+    <TextArea fx:id="resultArea" editable="false" prefHeight="200.0" prefWidth="300.00" wrapText="true" />
+
+</VBox>
