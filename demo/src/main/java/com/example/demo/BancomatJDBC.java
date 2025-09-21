@@ -5,8 +5,8 @@ import java.io.*;
 
 public class BancomatJDBC {
     public String url = "jdbc:mysql://localhost:3306/Bancomat?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
-    public String uid = "root";
-    public String pw = "BernardoCarla2frumosi";
+    public String uid = "uid";
+    public String pw = "PW";
     private BufferedReader reader;
     private Connection con;
 
@@ -315,3 +315,4 @@ public class BancomatJDBC {
         }
     }
 }
+
